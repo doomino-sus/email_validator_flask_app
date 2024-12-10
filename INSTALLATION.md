@@ -202,6 +202,6 @@ chmod -R 755 /home/user/domains/domain/public_html
 ```python
 app.run(host='0.0.0.0', port=5000, debug=True)
 ```
-- Sprawdź logi aplikacji w ścieżce określonej w LOG_FILE (domyślnie: /home/boguu/domains/app.suseu.studio/logs/app.log)
+- Sprawdź logi aplikacji w ścieżce określonej w LOG_FILE (domyślnie: /home/user/domains/domain/logs/app.log)
 - Monitoruj logi błędów serwera w katalogu logs hostingu
 - W przypadku problemów z SMTP, sprawdź logi w DEBUG_LEVEL

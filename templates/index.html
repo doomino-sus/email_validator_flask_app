@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Single Email Validation</h5>
+            </div>
+            <div class="card-body">
+                <form id="singleEmailForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email addresses (one per line)</label>
+                        <textarea class="form-control" id="email" rows="5" required placeholder="Enter email addresses, one per line"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-check-circle"></i> Validate
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Bulk Email Validation</h5>
+            </div>
+            <div class="card-body">
+                <form id="bulkEmailForm">
+                    <div class="mb-3">
+                        <label for="file" class="form-label">Upload CSV file</label>
+                        <input type="file" class="form-control" id="file" accept=".csv,.txt" required>
+                        <div class="form-text">Upload a CSV or TXT file containing one email address per line</div>
+                    </div>
+                    
+                    <div class="progress mb-3 d-none" id="validationProgress">
+                        <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-upload"></i> Upload and Validate
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Results Section -->
+<div id="resultsSection" class="mt-4" style="display: none;">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="card-title mb-0">Validation Results</h5>
+            <div id="downloadButtonContainer"></div>
+        </div>
+        <div class="card-body">
+            <div id="validationResults"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -37,7 +37,7 @@
 
 ### 2.2. Konfiguracja aplikacji w panelu hostingu
 - Python version: 3.11 (wymagane)
-- Application root: /home/boguu/domains/app.suseu.studio/public_html
+- Application root: /home/user/domains/domain/public_html
 - Application startup file: main.py
 - Application Entry point: app:app
 - Domena: Skonfiguruj domenę w panelu hostingu
@@ -71,7 +71,7 @@
 
 ### 3.1. Aktywacja środowiska wirtualnego
 ```bash
-source /home/boguu/virtualenv/domains/app.suseu.studio/public_html/3.11/bin/activate && cd /home/boguu/domains/app.suseu.studio/public_html
+source /home/user/virtualenv/domains/domain/public_html/3.11/bin/activate && cd /home/user/domains/domain/public_html
 ```
 
 ### 3.2. Instalacja wymaganych pakietów
@@ -89,7 +89,7 @@ pip install flask dnspython email-validator
 
 2. Upewnij się, że struktura katalogów jest następująca (zwróć szczególną uwagę na plik .env, który jest kluczowy dla konfiguracji aplikacji):
 ```
-/home/boguu/domains/app.suseu.studio/public_html/
+/home/user/domains/domain/public_html/
 ├── app.py
 ├── main.py
 ├── email_validator.py
@@ -144,7 +144,7 @@ UPLOAD_FOLDER=/tmp               # Katalog na pliki tymczasowe
 
 # Konfiguracja logowania
 LOG_LEVEL=DEBUG                  # Poziom szczegółowości logów
-LOG_FILE=/home/boguu/domains/app.suseu.studio/logs/app.log
+LOG_FILE=/home/user/domains/domain/logs/app.log
 ```
 
 ### 5.1 Zabezpieczenie danych wrażliwych
@@ -166,7 +166,7 @@ Po wykonaniu wszystkich kroków:
 
 1. W panelu hostingu ustaw parametry:
    - Python version: 3.11
-   - Application root: /home/boguu/domains/app.suseu.studio/public_html
+   - Application root: /home/user/domains/domain/public_html
    - Application startup file: main.py
    - Application Entry point: app:app
    - Aplikacja będzie dostępna pod adresem URL skonfigurowanym w panelu hostingu
@@ -194,7 +194,7 @@ Po wykonaniu wszystkich kroków:
 - Sprawdź uprawnienia do katalogu /tmp dla plików tymczasowych
 - Ustaw odpowiednie uprawnienia dla katalogów aplikacji:
 ```bash
-chmod -R 755 /home/boguu/domains/app.suseu.studio/public_html
+chmod -R 755 /home/user/domains/domain/public_html
 ```
 
 ### 8.3. Debugging

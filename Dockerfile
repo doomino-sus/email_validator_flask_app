@@ -19,9 +19,21 @@ ENV FLASK_APP=main.py
 # Uruchom aplikację
 CMD ["python", "main.py"]
 
+# docker build -t APP_NAME-BUILD .
+
+# sudo docker run -d \
+#  -p 5001:5000 \
+#  -p 25:25 \
+#  -p 465:465 \
+#  -p 587:587 \
+#  --env-file .env \
+#  --name APP_NAME-BUILD APP_NAME
+
 # TRZEBA ZMIENIĆ ZMIENNE W PLIKU .env
 # docker exec -it APP_NAME bash
 # cd /app
+# apt-get update
+# apt-get install nano
 # nano .env
-# docker restart my-flask-app
+# docker restart APP_NAME
 
